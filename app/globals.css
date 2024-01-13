@@ -2,26 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+main{
+  display: flex;
+  flex-direction: column;
+}
+.noise{
+  position: absolute;
+  background-image: url('/images/noise.png');
+  opacity: 0.3;
+}
+@font-face {
+  font-family: 'YourCustomFont';
+  src: local('YourCustomFont'), url('./Roseford.ttf') format('truetype'); /* Corrected the format to 'truetype' */
+}
+@font-face {
+  font-family: 'YourCustomFont1';
+  src: local('YourCustomFont1'), url('./Eczar.ttf') format('truetype'); /* Corrected the format to 'truetype' */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.custom-font {
+  font-family: 'YourCustomFont', sans-serif; /* Wrap font name in quotes and add fallback */
 }
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.custom-font1 {
+  font-family: 'YourCustomFont1', sans-serif; /* Wrap font name in quotes and add fallback */
 }
